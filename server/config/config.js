@@ -24,7 +24,7 @@ let urlDB;
 if (process.env.NODE_ENV === 'dev') {
     urlDB = 'mongodb://localhost:27017/DBCafeBar';
 } else {
-    urlDB = 'mongodb://lrlucas:lucas78199719@ds239911.mlab.com:39911/dbcafebar';
+    urlDB = process.env.MONGO_URI;
 } 
 
 process.env.URL_DB = urlDB;
